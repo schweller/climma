@@ -1,6 +1,6 @@
 {
   "name": "climma",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get weather. Everywhere.",
   "bin": {
     "climma": "./bin/climma.js"
