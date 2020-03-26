@@ -1,0 +1,9 @@
+{
+  "name": "climma",
+  "version": "1.0.0",
+  "description": "Get weather. Everywhere.",
+  "main": "index.js",
+  "repository": "git@github.com:schweller/climma.git",
+  "author": "Inácio Schweller <iscmendonca@gmail.com>",
+  "license": "Apache-2.0"
+}
