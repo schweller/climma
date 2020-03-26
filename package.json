@@ -2,7 +2,6 @@
   "name": "climma",
   "version": "1.0.0",
   "description": "Get weather. Everywhere.",
-  "main": "index.js",
   "bin": {
     "climma": "./bin/climma.js"
   },
@@ -26,5 +25,10 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
     "tslib": "^1.11.1"
-  }
+  },
+  "files": [
+    "README.md",
+    "lib/",
+    "bin/"
+  ]
 }
