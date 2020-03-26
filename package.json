@@ -7,7 +7,7 @@
   },
   "repository": "git@github.com:schweller/climma.git",
   "author": "Inácio Schweller <iscmendonca@gmail.com>",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
     "@types/minimist": "^1.2.0",
     "@types/node": "^12.12.31",
