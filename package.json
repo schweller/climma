@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "Get weather. Everywhere.",
   "main": "index.js",
+  "bin": {
+    "climma": "./bin/climma.js"
+  },
   "repository": "git@github.com:schweller/climma.git",
   "author": "Inácio Schweller <iscmendonca@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "@types/minimist": "^1.2.0",
     "@types/node": "^12.12.31",
+    "axios": "^0.19.2",
+    "minimist": "^1.2.5",
     "typescript": "^3.8.3"
   },
   "scripts": {
