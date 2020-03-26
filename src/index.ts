@@ -1,6 +1,11 @@
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 import axios from 'axios'
 import chalk from 'chalk'
 import minimist from 'minimist'
+
 
 async function main() {
   const argv = minimist(process.argv.slice(2))
