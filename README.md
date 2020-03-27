@@ -13,7 +13,17 @@
 
 ## Usage
 
-`$ climma London`
+`$ climma <city>`
+
+When running `climma` for the first time it'll create `.climmarc` on the user's $HOME directory and exit the program.
+Afterwards, edit it with the credentials for your API:
+
+1. Create an account on Openweathermap and get your API key
+2. Update `$HOME/.climmarc`:
+
+```bash
+API_KEY=YOUR_KEY_HERE
+```
 
 ## Roadmap
 
