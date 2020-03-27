@@ -1,25 +1,25 @@
 
-**climma** is a weather client for command-line, browser and Node.js applications.
+**climma** is the weather channel for your terminal.
 
 ## Features
 
-- Supports multiple API providers with consistent methods
-- Works on CLI, browsers and Node.js applications
-- Autoformatted with Prettier
+- Supports multiple API providers
+- Tuning configuration for metric system and other informations
+- TypeScript types
 
 ## Installation
 
-Yarn:
-
-`yarn add climma`
-
-NPM:
-
-`npm install --save climma`
+`npm install -g climma`
 
 ## Usage
 
-**TBD**
+`climma London`
+
+## Roadmap
+
+- ASCII for Conditions
+- Testing with Jest
+- Autoformatting with Prettier
 
 ## Contributing
 
