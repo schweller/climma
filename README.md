@@ -13,7 +13,7 @@
 
 ## Usage
 
-`climma London`
+`$ climma London`
 
 ## Roadmap
 
