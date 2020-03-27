@@ -1,6 +1,6 @@
 {
   "name": "climma",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The weather channel for your terminal",
   "bin": {
     "climma": "./bin/climma.js"
