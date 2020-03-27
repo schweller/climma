@@ -3,8 +3,7 @@
 
 ## Features
 
-- Supports multiple API providers
-- Tuning configuration for metric system and other informations
+- Supports Openweathermap for now
 - TypeScript types
 
 ## Installation
@@ -27,6 +26,8 @@ API_KEY=YOUR_KEY_HERE
 
 ## Roadmap
 
+- Support for multiple providers
+- Tuning configuration for metric system and other informations
 - ASCII for Conditions
 - Testing with Jest
 - Autoformatting with Prettier
