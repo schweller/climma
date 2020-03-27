@@ -1,13 +1,13 @@
 {
   "name": "climma",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "The weather channel for your terminal",
   "bin": {
     "climma": "./bin/climma.js"
   },
   "repository": "git@github.com:schweller/climma.git",
   "author": "Inácio Schweller <iscmendonca@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "@types/minimist": "^1.2.0",
     "@types/node": "^12.12.31",
@@ -30,6 +30,7 @@
   },
   "files": [
     "README.md",
+    "LICENSE",
     "lib/",
     "bin/"
   ]
