@@ -1,21 +1,28 @@
-import dotenv from 'dotenv'
-
-dotenv.config()
-
 import chalk from 'chalk'
 
 import { getWeatherByCity } from './api'
 import conditions, { Conditions } from './conditions'
+import getConfig from './config'
  
 async function main() {
+  const { config } = await getConfig()
+
   const [city] = process.argv.slice(2)
 
   if (city === undefined) {
     console.error(chalk.red('City must be provided!'))
     throw new Error('City must be provided')
   }
+  
+  const key = config ? config.API_KEY : undefined
+  
+  if (key === undefined) {
+    const error = `API_KEY must be provided! Edit .climmarc on your $HOME folder`
+    console.error(chalk.red(error))
+    throw new Error(error)    
+  }
 
-  const response = await getWeatherByCity({key: process.env.API_KEY, city})
+  const response = await getWeatherByCity({key, city})
   const weatherId: keyof Conditions = response.data.weather[0].id
 
   console.log(chalk.green(`Weather for ${city}`))

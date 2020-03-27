@@ -1,7 +1,7 @@
 {
   "name": "climma",
   "version": "1.0.3",
-  "description": "Get weather. Everywhere.",
+  "description": "The weather channel for your terminal",
   "bin": {
     "climma": "./bin/climma.js"
   },
@@ -19,7 +19,8 @@
   },
   "scripts": {
     "clean": "rm -rf lib/",
-    "build": "npm run clean && tsc"
+    "build": "npm run clean && tsc",
+    "start": "npm run build && node ./bin/climma.js London"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
