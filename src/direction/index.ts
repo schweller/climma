@@ -8,7 +8,10 @@ const directionsMap = ["↓", "↙", "←", "↖", "↑", "↗", "→", "↘"]
  * @param angle Degree provided by the API 
  * @returns 
  */
-const direction = (angle: number): string => {
+const direction = (angle: number | undefined): string => {
+  if (angle === undefined) {
+    return '?'
+  }
   return directionsMap[(Math.floor((angle / 22.5) + 0.5)) % 8]
 }
 
