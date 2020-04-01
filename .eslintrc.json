@@ -34,7 +34,6 @@
     "rules": {
         "import/extensions": 0,
         "max-len": ["error", { "code": 120 }],
-        "semi": 0,
         "react/destructuring-assignment": 0,
         "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
         "react/jsx-one-expression-per-line": 0,
