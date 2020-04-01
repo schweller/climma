@@ -1,6 +1,8 @@
 
 **climma** is the weather channel for your terminal.
 
+<img src="./public/climma_example.png">
+
 ## Features
 
 - Supports Openweathermap for now
