@@ -1,7 +1,5 @@
-import { getWeatherByCity, GetWeatherByCityData } from './getWeatherByCity'
+import { getWeatherByCity, GetWeatherByCityData } from './getWeatherByCity';
 
-export type WeatherData = Partial<GetWeatherByCityData>
+export type WeatherData = Partial<GetWeatherByCityData>;
 
-export {
-  getWeatherByCity,
-}
+export { getWeatherByCity };

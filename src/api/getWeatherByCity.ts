@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 export interface GetWeatherByCityData {
   readonly weatherId: number;
@@ -13,12 +13,17 @@ export interface GetWeatherByCityData {
 type Params = {
   readonly key?: string;
   readonly city?: string;
-}
+};
 
-export const getWeatherByCity = async ({key, city}: Params): Promise<GetWeatherByCityData> => {
-  const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`)
+export const getWeatherByCity = async ({
+  key,
+  city,
+}: Params): Promise<GetWeatherByCityData> => {
+  const response = await axios.get(
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`
+  );
 
-  const rain = response.data.rain || {}
+  const rain = response.data.rain || {};
 
   return {
     weatherId: response.data.weather[0].id,
@@ -27,6 +32,6 @@ export const getWeatherByCity = async ({key, city}: Params): Promise<GetWeatherB
     minTemperature: response.data.main.temp_min,
     maxTemperature: response.data.main.temp_max,
     rain: rain['1h'] || 0,
-    city
-  }
-}
+    city,
+  };
+};

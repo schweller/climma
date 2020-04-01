@@ -14,11 +14,11 @@ getColorInRange(14, colMap)
 ```
 */
 const getColorInRange = (n: number, map: number[][]) => {
-  const result = map.find(element => n < element[0])
+  const result = map.find((element) => n < element[0]);
   if (result === undefined) {
-    return 203
+    return 203;
   }
-  return result[1]
-}
+  return result[1];
+};
 
-export { getColorInRange }
+export { getColorInRange };
