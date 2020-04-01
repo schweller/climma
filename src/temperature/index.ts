@@ -9,7 +9,7 @@ const temperatureColor = (temp: number) => {
     [25, 226], [28, 220], [31, 214], [34, 208], [37, 202]]
 
   const n = getColorInRange(temp, colorMap)
-  return chalk.ansi256(n)(temp.toString())
+  return n
 }
 
 export default temperatureColor

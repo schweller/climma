@@ -9,6 +9,12 @@ import getConfig from './config'
 const render = (data: GetWeatherByCityData) => {
   const weatherId: keyof Conditions = data.weatherId
 
+  console.log("     .-.     ")
+  console.log("    (   ).   ")
+  console.log("   (___(__)  ")
+  console.log("   ⚡     ⚡   ")
+  console.log("      ⚡      ")
+
   console.log(`Weather for ${chalk.green.bold.underline(data.city)}`)
   console.log(``)
   console.log(chalk.green.bold(`${conditions[weatherId]}`))

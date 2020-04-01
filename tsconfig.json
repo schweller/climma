@@ -10,7 +10,8 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "strict": true,
-    "types": ["node"]
+    "types": ["node"],
+    "jsx": "react",
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
 }
