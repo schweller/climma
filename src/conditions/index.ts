@@ -75,7 +75,9 @@ const conditions: Conditions = {
   804: 'Very Cloudy',
 };
 
-const getCondition = (id: number | undefined) => {
+const getCondition = (
+  id: number | undefined
+): { condition: Conditions; id: number } => {
   if (id === undefined) {
     return { condition: 'Unknown', id: 0 };
   }
