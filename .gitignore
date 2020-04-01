@@ -1,5 +1,9 @@
-.env
-node_modules/
+# Build
 lib/
 
+# Dependencies
+node_modules/
+
+# Misc
+.DS_Store
 yarn-error.log
