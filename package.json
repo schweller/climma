@@ -24,7 +24,7 @@
   "scripts": {
     "clean": "rm -rf lib/",
     "build": "npm run clean && tsc",
-    "start": "npm run build && node ./bin/climma.js London"
+    "start": "npm run build && node ./bin/climma.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

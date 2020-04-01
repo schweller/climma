@@ -1,3 +1,4 @@
+import React from 'react'
 
 const directionsMap = ["↓", "↙", "←", "↖", "↑", "↗", "→", "↘"]
 
@@ -8,11 +9,17 @@ const directionsMap = ["↓", "↙", "←", "↖", "↑", "↗", "→", "↘"]
  * @param angle Degree provided by the API 
  * @returns 
  */
-const direction = (angle: number | undefined): string => {
+const getDirectionChar = (angle: number | undefined): string => {
   if (angle === undefined) {
     return '?'
   }
   return directionsMap[(Math.floor((angle / 22.5) + 0.5)) % 8]
 }
 
-export default direction;
+const Direction = ({deg}: { deg?: number}) => {
+  const char = getDirectionChar(deg)
+  
+  return <>{char}</>
+}
+
+export default Direction;

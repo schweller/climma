@@ -1,10 +1,9 @@
-export interface Conditions {
+interface Conditions {
   [key: number]: string
 }
 
 // OpenWeatherMap conditions
 // Conditions https://openweathermap.org/weather-conditions
-
 const conditions: Conditions = {
   // Thunderstorm
   200: "Thunderstorm with light rain",

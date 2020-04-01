@@ -3,7 +3,7 @@
 import React from 'react'
 import { render } from 'ink'
 
-import Climma from './render'
+import Climma from './Climma'
 
 const [city] = process.argv.slice(2)
 
