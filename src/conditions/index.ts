@@ -6,7 +6,6 @@ export interface Conditions {
 // Conditions https://openweathermap.org/weather-conditions
 
 const conditions: Conditions = {
-
   // Thunderstorm
   200: "Thunderstorm with light rain",
   201: "Thunderstorm with rain",
@@ -77,4 +76,12 @@ const conditions: Conditions = {
   804: "Very Cloudy"
 }
 
-export default conditions
+const getCondition = (id: number | undefined) => {
+  if (id === undefined) {
+    return { condition: 'Unknown', id: 0 }
+  }
+  
+  return { condition: conditions[id], id }
+}
+
+export default getCondition
