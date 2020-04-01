@@ -3,7 +3,8 @@ import { Box, Color } from 'ink'
 
 const Ascii = ({id}: {id?: number}) => {
   switch (id) {
-    case 800: // clear
+    // clear
+    case 800:
       return (
         <Box flexDirection="column">
           <Box><Color yellow>{"  \\   /  "}</Color></Box>
@@ -13,7 +14,8 @@ const Ascii = ({id}: {id?: number}) => {
           <Box><Color yellow>{"  /   \\ "}</Color></Box>        
         </Box>
       )
-    case 801: 
+    // partial clouds
+    case 801:  
     case 802:
       return (
         <Box flexDirection="column">
@@ -24,6 +26,7 @@ const Ascii = ({id}: {id?: number}) => {
           <Box>{"           "}</Box>
         </Box>
       )
+    // very cloudy
     case 803:
     case 804:
       return (
