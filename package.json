@@ -20,7 +20,10 @@
   "scripts": {
     "clean": "rm -rf lib/",
     "build": "npm run clean && tsc",
-    "start": "npm run build && node ./bin/climma.js London"
+    "start": "npm run build && node ./bin/climma.js London",
+    "eslint": "eslint ./src/**/*.ts ./src/**/*.tsx",
+    "prettier": "prettier --write ./src/**/*.ts",
+    "prettier-tsx": "prettier --write ./src/**/*.tsx",
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -37,6 +40,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": ">=4",
+    "lint-staged": ">=10",
     "prettier": "2.0.2",
     "tslib": "^1.11.1"
   },
@@ -45,5 +50,13 @@
     "LICENSE",
     "lib/",
     "bin/"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "prettier --write"
+  }
 }
