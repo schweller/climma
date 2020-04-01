@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Color } from 'ink'
 import Spinner from 'ink-spinner'
 
-// Api 
+// Api
 import { getWeatherByCity, WeatherData } from '../api'
 
 // Entities
@@ -24,10 +24,9 @@ interface Props {
 }
 
 class Climma extends React.Component<Props> {
-
   state: State = {
     weather: {},
-    loading: true
+    loading: true,
   }
 
   constructor(props: {city: string}) {
@@ -36,19 +35,19 @@ class Climma extends React.Component<Props> {
     this.fetchData = this.fetchData.bind(this)
   }
 
+  componentDidMount() {
+    this.fetchData()
+  }
+
   async fetchData() {
     const { config } = await getConfig()
     const key = config ? config.API_KEY : undefined
 
-    const response = await getWeatherByCity({key, city: this.props.city})
+    const response = await getWeatherByCity({ key, city: this.props.city })
     this.setState({
       loading: false,
-      weather: response
+      weather: response,
     })
-  }
-
-  componentDidMount() {
-    this.fetchData()
   }
 
   render() {
@@ -58,7 +57,10 @@ class Climma extends React.Component<Props> {
     if (loading) {
       return (
         <Box>
-          <Color green>Loading <Spinner type="dots" /></Color>
+          <Color green>
+            Loading
+            <Spinner type="dots" />
+          </Color>
         </Box>
       )
     }
@@ -70,7 +72,7 @@ class Climma extends React.Component<Props> {
             <Box marginBottom={1}>Weather for <Color green bold>{city}</Color></Box>
             <Box>{getCondition(weather.weatherId).condition}</Box>
             <Box>
-              <Temperature temp={weather.minTemperature}/> - <Temperature temp={weather.maxTemperature}/>
+              <Temperature temp={weather.minTemperature} /> - <Temperature temp={weather.maxTemperature} />
             </Box>
             <Box><Direction deg={weather.windDegree} /> {weather.windSpeed} km/h</Box>
             <Box marginBottom={1}>{weather.rain}mm</Box>
