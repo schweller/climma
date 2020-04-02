@@ -1,10 +1,15 @@
 
 **climma** is the weather channel for your terminal.
 
+<img src="./public/climma_example.png">
+
 ## Features
 
-- Supports Openweathermap for now
-- TypeScript types (at least some part of it)
+- Uses Openweathermap API
+- Rendered with [Ink](https://github.com/vadimdemedes/ink)
+- Awesome ASCII art for weather conditions
+- Autoformatting with Prettier
+- Typescript support
 
 ## Installation
 
@@ -24,13 +29,19 @@ Afterwards, edit it with the credentials for your API:
 API_KEY=YOUR_KEY_HERE
 ```
 
+> Tip: If you want a city with a composed name, e.g. Rio de Janeiro, use double quotes around the city name:
+> 
+```bash
+$ climma "Rio de Janeiro"
+```
+
 ## Roadmap
 
-- [ASCII for Conditions & rendering with Ink](https://github.com/schweller/climma/tree/render-with-ink)  
 - Support for multiple providers
-- Tuning configuration for metric system and other informations
+- Tuning configuration for metric system and other informations. Currently **climma** uses the metric system.
+- Next days forecast
+- Complete ASCII art library
 - Testing with Jest
-- Autoformatting with Prettier
 
 ## Contributing
 

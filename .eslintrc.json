@@ -1,0 +1,52 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    "rules": {
+        "import/extensions": 0,
+        "max-len": ["error", { "code": 120 }],
+        "react/destructuring-assignment": 0,
+        "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+        "react/jsx-one-expression-per-line": 0,
+        "react/state-in-constructor": ["error", "never"],
+        "@typescript-eslint/explicit-function-return-type": 0
+    },
+    "overrides": [
+        {
+          // enable the rule specifically for TypeScript files
+          "files": ["*.ts"],
+          "rules": {
+            "@typescript-eslint/explicit-function-return-type": ["error"]
+          }
+        }
+      ]    
+}
