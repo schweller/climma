@@ -1,9 +1,86 @@
 import React from 'react';
 import { Box, Color } from 'ink';
 
-
 const Ascii = ({ id }: { id?: number }) => {
   switch (id) {
+    // light thunderstorm 
+    case 200:
+    case 201:
+    case 210:
+    case 230:
+    case 231:
+      return (
+        <Box flexDirection="column">
+          <Box>{'     _      '}</Box>
+          <Box>{'  ⌢(  ᾿)⌢  '}</Box>
+          <Box>{' (.  .   _) '}</Box>
+          <Box><Color yellow>{`  ⚡⌣⚡⌣ ⚡   `}</Color></Box>
+          <Box>{' ʻ ʻ ʻ ʻ    '}</Box>
+        </Box>        
+      )
+    // heavy thunderstorm
+    case 202:
+    case 211:
+    case 212:
+    case 221:
+    case 232:
+      return (
+        <Box flexDirection="column">
+          <Box>{'     _      '}</Box>
+          <Box>{'  ⌢(  ᾿)⌢  '}</Box>
+          <Box>{' (.  .   _) '}</Box>
+          <Box><Color yellow>{`  ⚡⌣⚡⌣ ⚡   `}</Color></Box>
+          <Box>{' ‚ʻ‚ʻ‚ʻ‚ʻ    '}</Box>
+        </Box>        
+      )      
+    // rain / drizzle / light drizzle
+    case 300:
+    case 301:
+    case 310:
+    case 311:
+    case 313:
+    case 321:
+    case 500:
+    case 501:
+      return (
+        <Box flexDirection="column">
+          <Box>{'     _      '}</Box>
+          <Box>{'  ⌢(  ᾿)⌢  '}</Box>
+          <Box>{' (.  .   _) '}</Box>
+          <Box>{'  ʻ⌣ʻ ⌣ʻ   '}</Box>
+          <Box>{' ʻ ʻ ʻ ʻ    '}</Box>
+        </Box>        
+      )
+    // heavy rain / heavy drizzle
+    case 302:
+    case 312:
+    case 314:
+    case 502:
+    case 503:
+    case 504:
+      return (
+        <Box flexDirection="column">
+          <Box>{'     _      '}</Box>
+          <Box>{'  ⌢(  ᾿)⌢  '}</Box>
+          <Box>{' (.  .   _) '}</Box>
+          <Box>{' ‚ʻ⌣‚ʻ⌣ ʻ  '}</Box>
+          <Box>{' ‚ʻ‚ʻ‚ʻ‚ʻ   '}</Box>
+        </Box>
+      )
+    // shower rain
+    case 520:
+    case 521:
+    case 522:
+    case 531:
+      return (
+        <Box flexDirection="column">
+          <Box><Color yellow>{' \\._/    '}</Color></Box>
+          <Box><Color yellow>{'_/⌢(  ᾿)⌢ '}</Color></Box>
+          <Box><Color cyan>{'(.__.____) '}</Color></Box>
+          <Box>{' ‚ʻ‚ʻ‚ʻ‚ʻ '} </Box>
+          <Box>{'‚ʻ‚ʻ‚ʻ‚ʻ  '}</Box>
+        </Box>
+      )
     // snow
     case 600:
     case 601:
@@ -18,6 +95,7 @@ const Ascii = ({ id }: { id?: number }) => {
         </Box>        
       )
     // sleet / rain and snow
+    case 511:
     case 611:
     case 612:
     case 613:
@@ -77,7 +155,7 @@ const Ascii = ({ id }: { id?: number }) => {
         <Box flexDirection="column">
           <Box><Color yellow>{'  \\_      '}</Color></Box>
           <Box><Color yellow>{`_/ .-.     `}</Color></Box>
-          <Box><Color cyan>{` \\(   ).  `}</Color></Box>
+          <Box><Color cyan>{` \\⌢(   ).  `}</Color></Box>
           <Box><Color cyan>{` (___(__)  `}</Color></Box>
           <Box>{'           '}</Box>
         </Box>
@@ -87,21 +165,24 @@ const Ascii = ({ id }: { id?: number }) => {
     case 804:
       return (
         <Box flexDirection="column">
-          <Box>{'           '}</Box>
-          <Box>
-            <Color cyan>{`   _.--.   `}</Color>
-          </Box>
-          <Box>
-            <Color cyan>{` .(_(   ᾿) `}</Color>
-          </Box>
-          <Box>
-            <Color cyan>{`(__.__)__᾿)`}</Color>
-          </Box>
-          <Box>{'            '}</Box>
+          <Box>{'     _._     '}</Box>
+          <Box>{'  ⌢(_(  ᾿)⌢ '}</Box>
+          <Box>{' (.  ._  , ) '}</Box>          
+          <Box>{'   ⌣(  _᾿⌣  '}</Box>
+          <Box>{'     ⌣      '}</Box>
         </Box>
       );
+    // condition does not have ascii yet (supposed to be a question mark)
     default:
-      return <Box>No weather ASCII available</Box>;
+      return (
+        <Box flexDirection="column">
+          <Box>{'   ⌢     '}</Box>
+          <Box>{'  /  \\   '}</Box>
+          <Box>{'  `  /    '}</Box>
+          <Box>{'    \\    '} </Box>
+          <Box>{'     •    '}</Box>
+        </Box>        
+      )
   }
 };
 
