@@ -1,2 +1,5 @@
 # Ignore ASCII rendering for readability
 src/conditions/Ascii.tsx
+
+# Ignore README for now
+README.md
