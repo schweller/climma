@@ -91,7 +91,8 @@ class Climma extends React.Component<Props> {
             </Box>
           </Box>
           <Box marginTop={1}>
-            <Ascii id={weather.weatherId} />
+            {/* <Ascii id={weather.weatherId} /> */}
+            <Ascii id={622} />
           </Box>
         </Box>
       </Box>
