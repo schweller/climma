@@ -1,5 +1,6 @@
 import React from 'react';
 import { Color } from 'ink';
+import chalk from 'chalk';
 
 import { getColorInRange } from '../util';
 
@@ -33,11 +34,11 @@ const temperatureColor = (temp: number) => {
 
 const Temperature = ({ temp }: { temp?: number }) => {
   if (temp === undefined) {
-    return <Color ansi256={203}>{temp} °C</Color>;
+    return <Color>{chalk.ansi256(203)(temp)} °C</Color>;
   }
 
   const n = temperatureColor(temp);
-  return <Color ansi256={n}>{temp} °C</Color>;
+  return <Color>{chalk.ansi256(n)(temp)} °C</Color>;
 };
 
 export default Temperature;

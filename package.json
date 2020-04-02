@@ -9,9 +9,8 @@
   "author": "Inácio Schweller <iscmendonca@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@types/minimist": "^1.2.0",
-    "@types/node": "^12.12.31",
     "axios": "^0.19.2",
+    "chalk": "^4.0.0",
     "ink": "^2.7.1",
     "ink-spinner": "^3.0.1",
     "react": "^16.13.1",
@@ -30,6 +29,7 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
     "@types/ink-spinner": "^3.0.0",
+    "@types/node": "^12.12.31",
     "@types/react": "^16.9.31",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
