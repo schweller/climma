@@ -9,7 +9,7 @@
   "author": "Inácio Schweller <iscmendonca@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chalk": "^4.0.0",
     "ink": "^2.7.1",
     "ink-spinner": "^3.0.1",
